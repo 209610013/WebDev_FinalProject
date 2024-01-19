@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+  
+  <body>
+    
+    <div class="dice-container">
+      <div class="square" id="square1">
+        <div class="circle"></div>
+      </div>
+
+      <div class="square" id="square2">
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="square" id="square3">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <form id="diceForm">
+        <label for="numDice">Number of Dice to Roll:</label>
+        <select id="numDice" name="numDice">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br><br><br>
+        
+        <label for="numRolls">Number of Times to Roll:</label>
+        <input type="number" id="numRolls" name="numRolls" min="1" value="1">
+        <button type="button" onclick="rollDice()">Roll Dice</button>
+    </form>
+    </div>
+ <br>
+    <div class="stats-container">
+      <h2>Statistics</h2>
+      <table id="frequency">
+        <tr id="frequency-title">
+          <th>Frequency</th>
+        </tr>
+        <tr id="frequency-stats"></tr>
+      </table>
+      <table id="stats">
+        <tr>
+          <th>Mean</th>
+          <th><span id="mean"></span></th>
+        </tr>
+        
+        <tr>
+          <th>Median</th>
+          <th><span id="median"></span></th>
+        </tr>
+        
+        <tr>
+          <th>Mode</th>
+          <th><span id="mode"></span></th>
+        </tr>
+      </table>
+    </div>
+    
+  </body>
+
+</html>
